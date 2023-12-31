@@ -24,7 +24,8 @@
             border: 3px solid #024281;
             box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+            position: relative;
         }
         .profile-img{
             width: 100%;
@@ -68,6 +69,32 @@
             transform: scale(1.05);
             border: 5px solid red;
         }
+        .skill-card{
+            top: 48px;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            width: 100%;
+            height: 0%;
+            backdrop-filter: blur(40px);
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+        .skill-title{
+            margin-left: 30px;
+            font-size: 28px;
+            margin-top: 70px;
+            font-weight: bold;
+        }
+        .skill-card ul{
+            margin-left: 30px;
+        }
+        .skill-card li{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .business-card:hover .skill-card{
+           height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -87,6 +114,17 @@
                 <a href="#">Twitter</a>
                 <a href="#">Github</a>
             </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">My Skills</div>
+            <ul>
+                <li>UX Design</li>
+                <li>UI Design</li>
+                <li>User Research</li>
+                <li>User Testing</li>
+                <li>HTML/CSS/JS</li>
+                <li>ReactJs</li>
+            </ul>
         </div>
     </div>
 
